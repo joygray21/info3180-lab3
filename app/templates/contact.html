@@ -2,6 +2,7 @@
 
 {% block main %}
 <h1>Contact Form</h1>
+<hr>
 <p>Fill in this form to contact the site owners.</p>
 <form method="POST" action="{{ url_for('contact') }}">
     {{ form.csrf_token }}
@@ -10,21 +11,25 @@
         Please enter your full name. <br>
         {{ form.name }}
     </div>
+    <br>
     <div>
         {{ form.email.label }}  <br>
         Please enter your e-mail address. <br>
-        {{ form.email }}
+        {{ form.email }} 
     </div>
+    <br>
     <div>
         {{ form.subject.label }} <br>
         Please enter the subject for your message. <br>
-        {{ form.subject }}
+        {{ form.subject }} 
     </div>
+    <br>
     <div>
         {{ form.message.label }} <br>
         Please enter the message you would like to send. <br>
-        {{ form.message }}
+        {{ form.message }} 
     </div>
+    <br>
     <button type="submit">Send</button>
 </form>
 
