@@ -43,7 +43,7 @@ def contact():
             msg.body = body
             mail.send(msg)
 
-            flash('Message sent.')
+            flash('Message sent.', 'success')
             return redirect(url_for("home"))
         
         flash_errors(form)
